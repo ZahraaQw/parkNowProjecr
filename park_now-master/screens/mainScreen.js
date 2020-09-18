@@ -7,11 +7,11 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import {Title} from "react-native-paper";
 
 import Home from "./home";
-import notifiactionScreen from "./notifiactionScreen";
+import notifiactionScreen from "./NotifiactionScreen";
 import ProfilScreen from "./ProfilScreen";
 import EditProfileScreen from "./EditProfileScreen";
 
-import settingScreen from "./settingScreen";
+import settingScreen from "./SettingScreen";
 
 const HomeStack = createStackNavigator();
 
@@ -87,10 +87,36 @@ function ProfStackScreen() {
       }
 
    }}
+
+
+   options={{
+    title: '',
+    headerRight: () => (
+      <View style={{marginRight: 10}}>
+        <Icon.Button
+          name="account-edit"
+          size={25}
+          backgroundColor="#6f1282"
+          color={colors.text}
+          onPress={() => navigation.navigate('EditProfile')}
+        />
+      </View>
+    ),
+  }}
     >
-      <ProfilStackScreen.Screen name="My Profile" component={EditProfileScreen} />
+      <ProfilStackScreen.Screen name="My Profile" component={ProfilScreen} />
+      <ProfilStackScreen.Screen
+        name="EditProfile"
+        options={{
+          title: 'Edit Profile',
+        }}
+        component={EditProfileScreen}
+      />
      
     </ProfilStackScreen.Navigator>
+
+       
+    
   );
 }
 
@@ -130,7 +156,7 @@ function notifStack() {
 
 const Tab = createMaterialBottomTabNavigator();
 
-export default function mainScreen() {
+export default function MainScreen() {
   return (
    
     <Tab.Navigator
@@ -138,7 +164,7 @@ export default function mainScreen() {
       activeColor="#fff"
        style={{
         marginBottom:0.1,  
-        backgroundColor: 'tomato'
+       
       }} 
       
      

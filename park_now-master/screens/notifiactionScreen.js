@@ -3,7 +3,7 @@ import React from 'react';
 import {Text,View,StyleSheet} from 'react-native';
 
 
-const notificationScreen=()=>{
+const NotificationScreen=({navigation})=>{
     return(
     <View  style={ styles.container }>
         <Text>notification Page </Text>
@@ -24,4 +24,4 @@ const styles = StyleSheet.create({
     }
 
 });
-export  default notificationScreen;
+export  default NotificationScreen;

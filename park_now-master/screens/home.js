@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {Text,View,StyleSheet} from 'react-native';
 
 
@@ -11,10 +10,6 @@ const Home=({navigation})=>{
 
     );
 }
-
-
-
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,

@@ -2,7 +2,7 @@ import React from 'react';
 import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
 import {View,Text,StyleSheet,TouchableOpacity} from 'react-native';
 import Home from './home';
-import ProfilScreen from './ProfilScreen';
+
 
 import LinearGradient from 'react-native-linear-gradient';
 import {
@@ -14,9 +14,6 @@ import {
     Drawer,
     Switch
 } from 'react-native-paper';
-//import Icon from 'react-native-vector-icons/FontAwesome';
-
-//import Icon  from 'react-native-vector-icons/Icon';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const DrawerContent=(props)=>{
@@ -81,7 +78,7 @@ const DrawerContent=(props)=>{
              }
              label="Enterance Scanning"
              labelStyle={styles.lable}
-           //  onPress={() => {props.navigation.navigate('ProfilScreen')}}
+          //  onPress={() => {props.navigation.navigate('NotificationScreen')}}
              />
                <DrawerItem 
              icon={()=>(
